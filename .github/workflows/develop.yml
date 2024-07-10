@@ -21,7 +21,7 @@ jobs:
       - name: "Get branch name and sha"
         id: get_branch
         run: |
-          PR=$(curl -H "X-Kuroco-Auth: token 3866f64e2ef1619c0672020f3275cac8" https://otakahp.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
+          PR=$(curl -H "X-Kuroco-Auth: token 23910c342f8af15e6c41662dd21746c7" https://dev-otakahp.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
           echo "branch=$(echo $PR | jq -r '.ref')" >> $GITHUB_OUTPUT
           echo "sha=$(echo $PR | jq -r '.sha')" >> $GITHUB_OUTPUT
       - name: Checkout Repo
@@ -61,8 +61,8 @@ jobs:
       - name: Webhook
         uses: diverta/workflow-webhook@v3
         env:
-          webhook_url: "https://otakahp.g.kuroco.app/direct/menu/github/"
-          webhook_secret: "3866f64e2ef1619c0672020f3275cac8"
+          webhook_url: "https://dev-otakahp.g.kuroco.app/direct/menu/github/"
+          webhook_secret: "23910c342f8af15e6c41662dd21746c7"
           data: '{"single_zip":"1","domain":"otakahp.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
           
   #for Push
@@ -104,6 +104,6 @@ jobs:
       - name: Webhook
         uses: diverta/workflow-webhook@v3
         env:
-          webhook_url: "https://otakahp.g.kuroco.app/direct/menu/github/"
-          webhook_secret: "3866f64e2ef1619c0672020f3275cac8"
+          webhook_url: "https://dev-otakahp.g.kuroco.app/direct/menu/github/"
+          webhook_secret: "23910c342f8af15e6c41662dd21746c7"
           data: '{"single_zip":"1","domain":"otakahp.g.kuroco-front.app", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
