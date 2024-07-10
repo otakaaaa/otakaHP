@@ -1,6 +1,7 @@
 <template>
   <v-container fluid="true" class="contact-area" id="contact">
     <v-typography class="text-h4 border-b-md border-opacity-100 font-weight-bold">Contact</v-typography>
+    <div>main</div>
   </v-container>
 </template>
 
