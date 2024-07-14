@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid="true" class="top-area" id="top">
+  <v-container fluid class="top-area" id="top">
     <v-img :src="require('@/assets/otakaLab.svg')" width="70%" height="100%"></v-img>
   </v-container>
   <AboutComponent />

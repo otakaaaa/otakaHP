@@ -1,17 +1,17 @@
 <template>
-  <v-container fluid="true" class="about-area" id="about">
-    <v-typography class="text-h4 border-b-md border-opacity-100 font-weight-bold">About</v-typography>
+  <v-container fluid class="about-area" id="about">
+    <div class="text-h4 border-b-md border-opacity-100 font-weight-bold">About</div>
     <v-container class="container">
-      <v-typography>WEBサイト制作、WEBアプリの開発を共創いたします</v-typography>
+      <div>WEBサイト制作、WEBアプリの開発を共創いたします</div>
       <v-container class="container-col">
-        <v-typography>・要件定義</v-typography>
-        <v-typography>・外部設計</v-typography>
-        <v-typography>・詳細設計</v-typography>
-        <v-typography>・フロントエンド開発</v-typography>
-        <v-typography style="font-size: 12px; padding-left: 17px;">JavaScript、TypeScript、React、JQuery、Next.js、Vue.js、Angular等</v-typography>
-        <v-typography>・バックエンド開発</v-typography>
-        <v-typography style="font-size: 12px; padding-left: 18px;">PHP、Node.js、Ruby、CakePHP、Laravel、Express、Nest.js、Ruby on Rails等</v-typography>
-        <v-typography>・保守運用</v-typography>
+        <div>・要件定義</div>
+        <div>・外部設計</div>
+        <div>・詳細設計</div>
+        <div>・フロントエンド開発</div>
+        <div style="font-size: 12px; padding-left: 17px;">JavaScript、TypeScript、React、JQuery、Next.js、Vue.js、Angular等</div>
+        <div>・バックエンド開発</div>
+        <div style="font-size: 12px; padding-left: 18px;">PHP、Node.js、Ruby、CakePHP、Laravel、Express、Nest.js、Ruby on Rails等</div>
+        <div>・保守運用</div>
       </v-container>
     </v-container>
   </v-container>

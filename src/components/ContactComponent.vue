@@ -1,6 +1,6 @@
 <template>
-  <v-container fluid="true" class="contact-area" id="contact">
-    <v-typography class="text-h4 border-b-md border-opacity-100 font-weight-bold">Contact</v-typography>
+  <v-container fluid class="contact-area" id="contact">
+    <div class="text-h4 border-b-md border-opacity-100 font-weight-bold">Contact</div>
   </v-container>
 </template>
 
@@ -23,6 +23,6 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 400px;
+  height: 600px;
 }
 </style>
