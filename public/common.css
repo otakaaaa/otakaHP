@@ -2,10 +2,39 @@
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
+.top-heading {
+  font-size: 34px;
+}
+
 .color-white {
   color: #CFC6B6;
 }
 
 .border-white {
-  border-bottom: 2px solid #CFC6B6;
+  border-bottom: 0.139vw solid #CFC6B6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.container-col {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .top-heading {
+    font-size: 28px;
+  }
 }

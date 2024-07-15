@@ -10,19 +10,37 @@
           :src="require('@/assets/otakaLogo.svg')"
           width="100px"
           v-scroll-to="'#top'"
+          class="pc"
         />
+        <v-app-bar-nav-icon class="sp menu" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       </template>
       <template v-slot:default>
         <v-btn
           v-for="(nav, i) in globalNav"
           :key="i"
-          v-scroll-to="nav.id"
-        >{{ nav.text }}</v-btn>
+          v-scroll-to="nav.value"
+          class="pc"
+        >{{ nav.title }}</v-btn>
+        <v-img
+          :src="require('@/assets/otakaLogo.svg')"
+          width="100px"
+          v-scroll-to="'#top'"
+          class="sp"
+        />
       </template>
       <template v-slot:append>
-        <v-btn class="right-btn">Profile</v-btn>
+        <v-btn class="right-btn pc">Profile</v-btn>
       </template>
     </v-app-bar>
+    <v-navigation-drawer
+        v-model="drawer"
+        temporary
+        color="#55754D"
+      >
+        <v-list
+          :items="globalNav"
+        ></v-list>
+      </v-navigation-drawer>
     <v-main>
       <router-view/>
     </v-main>
@@ -37,26 +55,32 @@ export default defineComponent({
 
   data () {
     return {
+      drawer: false,
       globalNav: [
         {
-          text: 'TOP',
-          id: '#top'
+          title: 'TOP',
+          value: '#top',
+          props: { href: '#top' }
         },
         {
-          text: 'ABOUT',
-          id: '#about'
+          title: 'ABOUT',
+          value: '#about',
+          props: { href: '#about' }
         },
         {
-          text: 'ACHIEVEMENTS',
-          id: '#achievements'
+          title: 'ACHIEVEMENTS',
+          value: '#achievements',
+          props: { href: '#achievements' }
         },
         {
-          text: 'CONTACT',
-          id: '#contact'
+          title: 'CONTACT',
+          value: '#contact',
+          props: { href: '#contact' }
         },
         {
-          text: 'BLOG',
-          id: '#blog'
+          title: 'BLOG',
+          value: '#blog',
+          props: { href: '#blog' }
         }
       ]
     }
@@ -67,5 +91,20 @@ export default defineComponent({
 <style>
 .right-btn {
   margin-right: 70px;
+}
+.sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+  .menu {
+    font-size: 26px;
+    margin: 0 25px;
+  }
 }
 </style>

@@ -3,8 +3,8 @@
 
 <template>
   <v-container fluid class="contact-area" id="contact">
-    <div class="text-h4 border-b-md border-opacity-100 font-weight-bold">Contact</div>
-    <v-card width="60%" color="#CFC6B6" flat class="margin-20">
+    <div class="top-heading border-b-md border-opacity-100 font-weight-bold">Contact</div>
+    <v-card color="#CFC6B6" flat class="card-width margin-20">
       <v-card-text>
         <v-form>
           <v-text-field
@@ -99,7 +99,15 @@ export default defineComponent({
 .justify-center {
   justify-content: center;
 }
+.card-width {
+  width: 60%;
+}
 .margin-20 {
-  margin: 1.953vw;
+  margin: 1.389vw;
+}
+@media screen and (max-width: 768px) {
+  .card-width {
+    width: 85%;
+  }
 }
 </style>

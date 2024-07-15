@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="blog-area color-white" id="blog">
-    <div class="text-h4 border-white font-weight-bold">Blog</div>
+    <div class="top-heading border-white font-weight-bold">Blog</div>
   </v-container>
 </template>
 

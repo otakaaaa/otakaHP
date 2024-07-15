@@ -6,6 +6,7 @@
   <AchievementsComponent />
   <ContactComponent />
   <BlogComponent />
+  <FooterComponent />
 </template>
 
 <script lang="ts">
@@ -14,6 +15,7 @@ import AboutComponent from '../components/AboutComponent.vue'
 import AchievementsComponent from '../components/AchievementsComponent.vue'
 import ContactComponent from '../components/ContactComponent.vue'
 import BlogComponent from '../components/BlogComponent.vue'
+import FooterComponent from '../components/FooterComponent.vue'
 
 export default defineComponent({
   name: 'TopView',
@@ -22,7 +24,8 @@ export default defineComponent({
     AboutComponent,
     AchievementsComponent,
     ContactComponent,
-    BlogComponent
+    BlogComponent,
+    FooterComponent
   }
 })
 </script>
@@ -31,22 +34,11 @@ export default defineComponent({
 .top-area {
   background-size: 75%;
   background-position: 50%;
-  background-position-y: 20px;
+  background-position-y: 1.389vw;
   background-color: #55754D;
   width: 100%;
   height: calc(100vh - 100px);
   display: flex;
   align-items: center;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 14.5px;
-}
-.container-col {
-  display: flex;
-  flex-direction: column;
-  font-size: 14.5px;
 }
 </style>

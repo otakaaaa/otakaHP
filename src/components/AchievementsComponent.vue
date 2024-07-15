@@ -4,12 +4,13 @@
 
 <template>
   <v-container fluid class="achievements-area color-white" id="achievements">
-    <div class="text-h4 border-white font-weight-bold">Achievements</div>
+    <div class="top-heading border-white font-weight-bold">Achievements</div>
     <v-row style="width:80%;">
       <v-col cols="12" sm="6" md="4" lg="4" v-for="(data, i) in achievements" v-bind:key="i">
         <v-card
-          class="mx-auto my-12"
+          class="mx-auto my-6"
           max-width="320"
+          v-if="data.open_flg"
         >
           <v-img
             height="200"
@@ -33,17 +34,21 @@
         </v-card>
         <!-- modal -->
         <template>
-          <v-dialog v-model="dialog" width="500" v-bind:key="i">
+          <v-dialog v-model="dialog" width="34.722vw" v-bind:key="i">
             <v-card>
               <v-img
-                height="200"
+                height="13.889vw"
                 :src="achievementForDialog.image.url_org"
                 cover
               >
               </v-img>
               <v-card-item>
                 <v-card-title>{{ achievementForDialog.subject }}</v-card-title>
-                <v-card-text>{{ achievementForDialog.contents }}</v-card-text>
+                <v-card-text>
+                  <div>
+                    {{ achievementForDialog.contents }}
+                  </div>
+                </v-card-text>
               </v-card-item>
               <v-btn text="閉じる" color="deep-purple-lighten-2" @click="dialog = false" />
             </v-card>
