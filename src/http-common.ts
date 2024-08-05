@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios'
 
 const apiClient: AxiosInstance = axios.create({
-  baseURL: process.env.VUE_APP_BASE_URL,
+  baseURL: process.env.VUE_APP_BASE_URL || 'https://dev-otakahp.g.kuroco.app',
   headers: {
     'Content-type': 'application/json'
   }
